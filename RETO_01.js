@@ -1,6 +1,4 @@
-function findFirstRepeated(gifts) {
-  // Score: 260
-  const setGifts = new Set(gifts)
-  const idx = gifts.findIndex((gift, i) => gift !== [...setGifts][i])
-  return gifts[idx] ?? -1
+function findFirstRepeated (gifts) {
+  // Score: 360
+  return gifts.filter((item, idx) => gifts.indexOf(item) !== idx)?.[0] ?? -1
 }
